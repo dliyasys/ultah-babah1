@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun Babah! 👔🌟</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            color: #1a2a3a;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            max-width: 400px;
+            width: 85%;
+            position: relative;
+            z-index: 10;
+            border: 2px solid #ffd700;
+        }
+
+        h1 { 
+            color: #1e3c72;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #555;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .pesan {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 20px 0;
+            min-height: 90px;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #ffffff;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(30, 60, 114, 0.4);
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(30, 60, 114, 0.6);
+        }
+
+        /* Dekorasi Bintang Melayang */
+        .star {
+            position: absolute;
+            font-size: 20px;
+            animation: float 4s linear infinite;
+            bottom: -20px;
+            z-index: 1;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Efek Bintang/Elegan Melayang -->
+    <div class="star" style="left: 10%; animation-duration: 5s;">⭐</div>
+    <div class="star" style="left: 30%; animation-duration: 4s; animation-delay: 1s;">✨</div>
+    <div class="star" style="left: 50%; animation-duration: 6s; animation-delay: 2s;">🎉</div>
+    <div class="star" style="left: 70%; animation-duration: 3s; animation-delay: 1.5s;">🌟</div>
+    <div class="star" style="left: 90%; animation-duration: 5s; animation-delay: 0.5s;">👑</div>
+
+    <div class="card">
+        <h1>🎉 Happy Birthday, Babah! 👔</h1>
+        <div class="subtitle">Ayah Paling Hebat & Panutan Keren! 🌟</div>
+        <div class="pesan" id="teks-ucapan">Tekan tombol di bawah ya Bah! 👇</div>
+        <button onclick="tampilkanUcapan()">Buka Pesan 🎁</button>
+    </div>
+
+    <script>
+        const ucapanList = [
+            "Barakallah fii umrik Babah! 🎂👔",
+            "Terima kasih ya Bah udah selalu jadi pahlawan, pelindung, dan kerja keras buat keluarga. 🤲✨",
+            "selalu diberikan kesehatan, umur yang panjang dan berkah, rezeki yang berlimpah, dan selalu bahagia! Aamiin. 🌟",
+            "Doa kan kami anak anak mu sukses dunia akhirat ya babah! Tetap jadi Babah yang paling keren dan hebat ya! makasi Babah! 👑💪"
+          "maaf telat bah soalnya pas tanggal 8 sampe kemarin ashfi sibux ngurusin pcmb sama mpls, sampe lula buat ngucapin dan minta traktir xixixi"
+          "sekarang aja we bah traktir gacoan xixixi"
+        ];
+
+        let index = 0;
+
+        function tampilkanUcapan() {
+            const elemenTeks = document.getElementById("teks-ucapan");
+            elemenTeks.style.opacity = 0;
+            
+            setTimeout(() => {
+                elemenTeks.innerText = ucapanList[index];
+                elemenTeks.style.opacity = 1;
+                elemenTeks.style.transition = "opacity 0.5s";
+                index = (index + 1) % ucapanList.length;
+            }, 200);
+        }
+    </script>
+</body>
+</html>
