@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun BABAH! 🎂</title>
+    <style>
+        body {
+            background-color: #1a1a2e;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .card {
+            background: #16213e;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            max-width: 400px;
+            width: 90%;
+        }
+        h1 { color: #e94560; }
+        .pesan {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 20px 0;
+            min-height: 80px;
+        }
+        button {
+            background: #e94560;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover { background: #0f3460; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>🎉 Happy Birthday, Babah! 🎉</h1>
+        <div class="Assalamualaikum Babah! 
+Makasih udah jadi kepala  dan pelindung di rumahh,babah sehat selalu, panjang umur, dipanjangkan juga rezekinya, kurangin ngerokok, banyakin olahraga, selalu bahagia dan selalu di ridhoi allah setiap langkah babah aamiin " id="teks-ucapan">Klik tombol di bawah buat lihat ucapannya! 👇</div>
+        <button onclick="tampilkanUcapan()">Klik di Sini! 🎁</button>
+    </div>
+
+    <!-- Kode JavaScript Dimulai di Sini -->
+    <script>
+        const ucapanList = [
+            "hallo babah! Selamat ulang tahun ya! 🎂",
+            "Makasih udah selalu berusaha jadi ayah yang terbaik. ❤️",
+            "babah sehat selalu, uangnya makin hari makin banyak, dan bahagia terus! Aamiin 🤲",
+            "Salam sayang dari anakmu yang paling cantik inieh! 😎✨"
+        ];
+
+        let index = 0;
+
+        function tampilkanUcapan() {
+            const elemenTeks = document.getElementById("teks-ucapan");
+            elemenTeks.innerText = ucapanList[index];
+            
+            // Pindah ke ucapan berikutnya
+            index = (index + 1) % ucapanList.length;
+        }
+    </script>
+</body>
+</html>
